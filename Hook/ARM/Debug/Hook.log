@@ -1,0 +1,2 @@
+﻿  dllmain.cpp
+ARM\Debug\dllmain.obj : fatal error LNK1112: тип компьютера модуля "x86" конфликтует с типом целевого компьютера "ARM"
