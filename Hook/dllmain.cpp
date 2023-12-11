@@ -39,11 +39,11 @@ typedef int(__stdcall* pSendPacket) (void* Src, size_t Size);
 // Адрес оригинальной функции
 DWORD GameBase = (uintptr_t)GetModuleHandle(NULL);
 
-DWORD address = GameBase + 0x367CE0;
+DWORD SendPacketAddress = GameBase + 0x367CE0;
 DWORD BaseAddress = GameBase + 0xA88F70;
 
 // Оригинальная функция
-pSendPacket oSendPacket = (pSendPacket)(address);
+pSendPacket oSendPacket = (pSendPacket)(SendPacketAddress);
 
 // unsigned char packetBytes[] = { 0x02, 0x00, 0xB0, 0x57, 0x0B, 0x00 };
 // void* packet = static_cast<void*>(packetBytes);
